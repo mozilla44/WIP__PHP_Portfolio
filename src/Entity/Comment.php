@@ -20,6 +20,9 @@ class Comment
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $date = null;
 
+    #[ORM\ManyToOne(inversedBy: 'comments')]
+    private ?User $poster = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -45,6 +48,18 @@ class Comment
     public function setDate(\DateTimeInterface $date): static
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getPoster(): ?User
+    {
+        return $this->poster;
+    }
+
+    public function setPoster(?User $poster): static
+    {
+        $this->poster = $poster;
 
         return $this;
     }
