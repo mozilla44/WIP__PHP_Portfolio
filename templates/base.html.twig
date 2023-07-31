@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
 
-        {% block javascripts %}
-        {% endblock %}
-    </head>
-    <body>
-        {% for error in app.flashes('login-error') %}
-        <div class="alert alert-danger" role="alert">{{ error }}</div>
-        {% endfor %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles/css/base.css">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    {% block stylesheets %}
+    {% endblock %}
 
-        {% for success in app.flashes('success') %}
-        <div class="alert alert-danger" role="alert">{{ success }}</div>
-        {% endfor %}
+    {% block javascripts %}
+    {% endblock %}
+</head>
 
-        {% block body %}{% endblock %}
-    </body>
+<body>
+    <header>
+        <nav class="top_nav">
+            <a class="nav_link" href="">Se connecter</a>
+            <a class="nav_link" href="">Se déconnecter</a>
+            <a class="nav_link" href="">admin dashboard</a>
+            <a class="nav_link" href="">Mon CV</a>
+            <a class="nav_link" href="">contact</a>
+        </nav>
+    </header>
+
+
+    {% for error in app.flashes('login-error') %}
+    <div class="alert alert-danger" role="alert">{{ error }}</div>
+    {% endfor %}
+
+    {% for success in app.flashes('success') %}
+    <div class="alert alert-danger" role="alert">{{ success }}</div>
+    {% endfor %}
+
+    {% block body %}{% endblock %}
+    <footer>
+        <nav class="footer_nav">
+            <a href="">RGPD</a>
+            <a href="">Mentions légales</a>
+        </nav>
+    </footer>
+
+
+
+</body>
+
 </html>

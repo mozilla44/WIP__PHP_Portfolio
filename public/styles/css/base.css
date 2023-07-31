@@ -1,0 +1,60 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 3rem;
+  background-color: rgb(227, 217, 217);
+}
+header .top_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 1rem;
+  gap: 2rem;
+}
+header .top_nav a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+header .top_nav a:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  border-bottom: 1px solid black;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  background-color: rgb(227, 217, 217);
+}
+footer nav {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+footer nav a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 0.5rem 0 0.5rem;
+  cursor: pointer;
+}
+footer nav a:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  border-bottom: 1px solid black;
+}
