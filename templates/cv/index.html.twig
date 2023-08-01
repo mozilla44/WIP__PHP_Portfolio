@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CvController!{% endblock %}
+
+{% block body %}
+
+<div class="projects">projets</div>
+<div class="experiences">experiences</div>
+<div class="techno">techno</div>
+<div class="training">training</div>
+<div class="hobby">hobby</div>
+
+
+
+
+{% for p in Project %}
+<li>{{ p.name }}</li>
+{% endfor %}
+
+{% endblock %}
