@@ -28,3 +28,7 @@
 .stack li, .experience li, .hobby li {
   list-style-type: none;
 }
+
+.hobby {
+  margin-bottom: 6rem;
+}

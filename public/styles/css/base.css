@@ -37,8 +37,8 @@ header .top_nav a:hover {
 }
 
 footer {
-  /* position: absolute;
-  bottom: 0; */
+  position: fixed;
+  bottom: 0;
   margin-top: 2rem;
   width: 100vw;
   background-color: rgb(227, 217, 217);
