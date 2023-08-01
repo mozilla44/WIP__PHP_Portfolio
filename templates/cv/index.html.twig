@@ -1,25 +1,32 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Hello CvController!{% endblock %}
+{% block stylesheets %}
+<link href='/styles/css/cv.css' rel="stylesheet" />
+
+{% endblock %}
 
 {% block body %}
 
-<div class="projects">
+<section class="projects">
+    <h2>Mes projets</h2>
     {% for p in Project %}
-    <li>{{ p.name }}</li>
-    <li>{{ p.date|date('d-m-Y') }}</li>
-    <li>{{ p.description }}</li>
-</div>
+    <div class="section_title">
+        <li class="project_item underlined">{{ p.name }}</li>
+        <li class="project_item">{{ p.date|date('d-m-Y') }}</li>
+        <li class="project_item">{{ p.description }}</li>
+    </div>
+    {% endfor %}
+</section>
 
-<div class="experiences">experiences</div>
+{# <div class="experiences">experiences</div>
 <div class="techno">techno</div>
 <div class="training">training</div>
 <div class="hobby">hobby</div>
+#}
 
 
 
 
-
-{% endfor %}
 
 {% endblock %}

@@ -1,0 +1,17 @@
+.projects {
+  h2 {
+    text-align: center;
+  }
+  li{
+    list-style-type: none
+  }
+  border: 3px solid red;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding-left: 2rem;
+  .underlined{
+    text-decoration: underline;
+  }
+  
+}
