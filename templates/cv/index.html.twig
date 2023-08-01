@@ -28,6 +28,24 @@
     {% endfor %}
 </section>
 
+<section class="experience">
+    <h2>Mes experiences profesionelles</h2>
+    {% for e in Experience %}
+    <div class="section_title">
+        <li class="project_item">{{ e.name }}tete</li>
+    </div>
+    {% endfor %}
+</section>
+
+<section class="hobby">
+    <h2>Mes centres d'interêt</h2>
+    {% for h in Hobby %}
+    <div class="section_title">
+        <li class="project_item">{{ h.name }}</li>
+    </div>
+    {% endfor %}
+</section>
+
 {# <div class="experiences">experiences</div>
 <div class="techno">techno</div>
 <div class="training">training</div>

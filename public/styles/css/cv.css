@@ -20,12 +20,12 @@
   text-decoration: underline;
 }
 
-.stack {
+.stack, .experience {
   padding-left: 2rem;
 }
-.stack h2 {
+.stack h2, .experience h2 {
   text-align: center;
 }
-.stack li {
+.stack li, .experience li {
   list-style-type: none;
 }
