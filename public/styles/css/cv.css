@@ -1,5 +1,4 @@
 .projects {
-  border: 3px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,12 +19,12 @@
   text-decoration: underline;
 }
 
-.stack, .experience {
+.stack, .experience, .hobby {
   padding-left: 2rem;
 }
-.stack h2, .experience h2 {
+.stack h2, .experience h2, .hobby h2 {
   text-align: center;
 }
-.stack li, .experience li {
+.stack li, .experience li, .hobby li {
   list-style-type: none;
 }

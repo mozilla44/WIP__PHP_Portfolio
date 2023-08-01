@@ -58,3 +58,8 @@ footer nav a:hover {
           transform: scale(1.02);
   border-bottom: 1px solid black;
 }
+
+.app_title, .app_catchpharse {
+  text-align: center;
+  margin-top: 5rem;
+}

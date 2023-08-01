@@ -15,6 +15,7 @@
         <li class="project_item underlined">{{ p.name }}</li>
         <li class="project_item">{{ p.date|date('d-m-Y') }}</li>
         <li class="project_item">{{ p.description }}</li>
+        <li class="project_item"><a href="{{p.github}}">{{p.github}}</a></li>
     </div>
     {% endfor %}
 </section>
@@ -32,7 +33,24 @@
     <h2>Mes experiences profesionelles</h2>
     {% for e in Experience %}
     <div class="section_title">
-        <li class="project_item">{{ e.name }}tete</li>
+        <li class="project_item">{{ e.name }}</li>
+        <li class="project_item">{{ e.start_date |date('d-m-Y')}}</li>
+        <li class="project_item">{{ e.end_date |date('d-m-Y')}}</li>
+        <li class="project_item">{{ e.place |date('d-m-Y')}}</li>
+        <li class="project_item">{{ e.description}}</li>
+    </div>
+    {% endfor %}
+</section>
+
+<section class="experience">
+    <h2>Ma formation</h2>
+    {% for t in Trainig %}
+    <div class="section_title">
+        <li class="project_item">{{ t.name }}</li>
+        <li class="project_item">{{ t.start_date |date('d-m-Y')}}</li>
+        <li class="project_item">{{ t.end_date |date('d-m-Y')}}</li>
+        <li class="project_item">{{ t.place |date('d-m-Y')}}</li>
+        <li class="project_item">{{ t.description}}</li>
     </div>
     {% endfor %}
 </section>
@@ -46,11 +64,6 @@
     {% endfor %}
 </section>
 
-{# <div class="experiences">experiences</div>
-<div class="techno">techno</div>
-<div class="training">training</div>
-<div class="hobby">hobby</div>
-#}
 
 
 
