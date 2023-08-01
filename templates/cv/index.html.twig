@@ -34,9 +34,9 @@
     {% for e in Experience %}
     <div class="section_title">
         <li class="project_item">{{ e.name }}</li>
-        <li class="project_item">{{ e.start_date |date('d-m-Y')}}</li>
-        <li class="project_item">{{ e.end_date |date('d-m-Y')}}</li>
-        <li class="project_item">{{ e.place |date('d-m-Y')}}</li>
+        <li class="project_item">début : {{ e.startDate|date('d-m-Y') }}</li>
+        <li class="project_item">fin : {{ e.endDate|date('d-m-Y') }}</li>
+        <li class="project_item">{{ e.place}}</li>
         <li class="project_item">{{ e.description}}</li>
     </div>
     {% endfor %}
@@ -47,9 +47,9 @@
     {% for t in Trainig %}
     <div class="section_title">
         <li class="project_item">{{ t.name }}</li>
-        <li class="project_item">{{ t.start_date |date('d-m-Y')}}</li>
-        <li class="project_item">{{ t.end_date |date('d-m-Y')}}</li>
-        <li class="project_item">{{ t.place |date('d-m-Y')}}</li>
+        <li class="project_item">début : {{ t.startDate|date('d-m-Y')}}</li>
+        <li class="project_item">fin : {{ t.endDate|date('d-m-Y')}}</li>
+        <li class="project_item">{{ t.place}}</li>
         <li class="project_item">{{ t.description}}</li>
     </div>
     {% endfor %}
