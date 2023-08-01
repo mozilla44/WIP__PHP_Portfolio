@@ -19,3 +19,13 @@
 .projects .underlined {
   text-decoration: underline;
 }
+
+.stack {
+  padding-left: 2rem;
+}
+.stack h2 {
+  text-align: center;
+}
+.stack li {
+  list-style-type: none;
+}
