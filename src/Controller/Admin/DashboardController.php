@@ -2,11 +2,17 @@
 
 namespace App\Controller\Admin;
 
-use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
-use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
-use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
+use App\Entity\Experience;
+use App\Entity\Hobby;
+use App\Entity\Project;
+use App\Entity\Skill;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
+use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
+use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
+
 
 class DashboardController extends AbstractDashboardController
 {
@@ -41,6 +47,10 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-        // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
+        yield MenuItem::linkToCrud('Projets', 'fas fa-list', Project::class);
+        yield MenuItem::linkToCrud('Expériences', 'fas fa-list', Experience::class);
+        yield MenuItem::linkToCrud('Ma stack', 'fas fa-list', Skill::class);
+
+        yield MenuItem::linkToCrud('Centres d\'intérêt', 'fas fa-list', Hobby::class);
     }
 }
