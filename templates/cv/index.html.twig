@@ -4,7 +4,13 @@
 
 {% block body %}
 
-<div class="projects">projets</div>
+<div class="projects">
+    {% for p in Project %}
+    <li>{{ p.name }}</li>
+    <li>{{ p.date|date('d-m-Y') }}</li>
+    <li>{{ p.description }}</li>
+</div>
+
 <div class="experiences">experiences</div>
 <div class="techno">techno</div>
 <div class="training">training</div>
@@ -13,8 +19,7 @@
 
 
 
-{% for p in Project %}
-<li>{{ p.name }}</li>
+
 {% endfor %}
 
 {% endblock %}
