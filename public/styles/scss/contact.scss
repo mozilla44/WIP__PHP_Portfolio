@@ -1,11 +1,17 @@
 .contact-form{
-    border: 3px solid red;
     width: 50%;
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-items:center;
     align-items: center;
-}.required{
-    color: blue;
+    align-content:center;
+    input {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    label {
+        display: none
+    }
 }
