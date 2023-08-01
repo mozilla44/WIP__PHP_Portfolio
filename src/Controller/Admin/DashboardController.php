@@ -6,6 +6,7 @@ use App\Entity\Experience;
 use App\Entity\Hobby;
 use App\Entity\Project;
 use App\Entity\Skill;
+use App\Entity\User;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -50,7 +51,9 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Projets', 'fas fa-list', Project::class);
         yield MenuItem::linkToCrud('Expériences', 'fas fa-list', Experience::class);
         yield MenuItem::linkToCrud('Ma stack', 'fas fa-list', Skill::class);
-
         yield MenuItem::linkToCrud('Centres d\'intérêt', 'fas fa-list', Hobby::class);
+         yield MenuItem::linkToCrud('users', 'fas fa-list', User::class); 
+
+
     }
 }
