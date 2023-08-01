@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+<link href='/styles/css/contact.css' rel="stylesheet" />
+        
+{% endblock %}
+
+{% block title %}Formulaire de contact{% endblock %}
+
+{% block body %}
+<div class="contact-form">
+    <h1>Formulaire de contact</h1>
+    {{ form(formulaire) }}
+</div>
+{% endblock %}
