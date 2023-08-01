@@ -30,8 +30,9 @@ header {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  bottom: 0; 
+  margin-top: 2rem;
   width: 100vw;
   background-color: rgb(227, 217, 217);
   nav {
@@ -49,4 +50,9 @@ footer {
       }
     }
   }
+}
+
+.app_title,.app_catchpharse{
+  text-align: center;
+  margin-top: 5rem;
 }

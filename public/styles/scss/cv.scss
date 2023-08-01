@@ -1,0 +1,29 @@
+.projects {
+  h2 {
+    text-align: center;
+  }
+  li{
+    list-style-type: none
+  }
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding-left: 2rem;
+  .underlined{
+    text-decoration: underline;
+  }
+}
+
+.stack,.experience,.hobby {
+    padding-left: 2rem;
+    h2 {
+        text-align: center;
+    }
+    li{
+        list-style-type: none
+    }
+}
+
+.hobby{
+    margin-bottom: 6rem;
+}

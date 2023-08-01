@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CvController!{% endblock %}
+{% block stylesheets %}
+<link href='/styles/css/cv.css' rel="stylesheet" />
+
+{% endblock %}
+
+{% block body %}
+
+<section class="projects">
+    <h2>Mes projets</h2>
+    {% for p in Project %}
+    <div class="section_title">
+        <li class="project_item underlined">{{ p.name }}</li>
+        <li class="project_item">{{ p.date|date('d-m-Y') }}</li>
+        <li class="project_item">{{ p.description }}</li>
+        <li class="project_item"><a href="{{p.github}}">{{p.github}}</a></li>
+    </div>
+    {% endfor %}
+</section>
+
+<section class="stack">
+    <h2>Ma stack</h2>
+    {% for t in Techno %}
+    <div class="section_title">
+        <li class="project_item">{{ t.name }}</li>
+    </div>
+    {% endfor %}
+</section>
+
+<section class="experience">
+    <h2>Mes experiences profesionelles</h2>
+    {% for e in Experience %}
+    <div class="section_title">
+        <li class="project_item">{{ e.name }}</li>
+        <li class="project_item">début : {{ e.startDate|date('d-m-Y') }}</li>
+        <li class="project_item">fin : {{ e.endDate|date('d-m-Y') }}</li>
+        <li class="project_item">{{ e.place}}</li>
+        <li class="project_item">{{ e.description}}</li>
+    </div>
+    {% endfor %}
+</section>
+
+<section class="experience">
+    <h2>Ma formation</h2>
+    {% for t in Trainig %}
+    <div class="section_title">
+        <li class="project_item">{{ t.name }}</li>
+        <li class="project_item">début : {{ t.startDate|date('d-m-Y')}}</li>
+        <li class="project_item">fin : {{ t.endDate|date('d-m-Y')}}</li>
+        <li class="project_item">{{ t.place}}</li>
+        <li class="project_item">{{ t.description}}</li>
+    </div>
+    {% endfor %}
+</section>
+
+<section class="hobby">
+    <h2>Mes centres d'interêt</h2>
+    {% for h in Hobby %}
+    <div class="section_title">
+        <li class="project_item">{{ h.name }}</li>
+    </div>
+    {% endfor %}
+</section>
+
+
+
+
+
+
+{% endblock %}
